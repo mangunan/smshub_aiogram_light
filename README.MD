@@ -28,6 +28,7 @@ For other Linux flavors, macOS, and Windows, packages are available at
 
 http://www.python.org/getit/
 
+.
 ### Quick Start
 
 Clone the repository:
@@ -71,6 +72,7 @@ To see the ServiceName and code https://smshub.org/en/info#getServices
 
 To get your Telegram Chat ID, you can use [@userinfobot](https://t.me/userinfobot) on Telegram. Simply forward a message to this bot, and it will reply with the user info, including the Chat ID.
 
+.
 ### Running the Bot
 
 To start the bot, run the following command:
@@ -81,6 +83,7 @@ python main.py
 
 Now, you can go to your Telegram App and interact with your bot.
 
+.
 ### Autostart the bot
 
 To make bot autorun when system is booting
