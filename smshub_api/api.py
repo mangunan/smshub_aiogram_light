@@ -34,7 +34,7 @@ class SmsHubAPI:
             logger.error(e)
             return e
 
-    async def get_number(self, service, country=0):
+    async def get_number(self, service, country=6):
         """
         Get phone number from smshub.org for the specified service and country.
 
@@ -53,7 +53,7 @@ class SmsHubAPI:
             elif response.text == 'NO_BALANCE':
                 return 'Not enough money'
             number_id = response.text[14:23]
-            number = response.text[25:36]
+            number = response.text[24:38]
             return number, number_id
         except Exception as e:
             logger.error(e)
