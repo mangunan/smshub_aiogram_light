@@ -33,8 +33,8 @@ http://www.python.org/getit/
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/smshub-api-telegram-bot.git
-cd smshub-api-telegram-bot
+git clone https://github.com/mangunan/smshub_aiogram_light.git
+cd smshub_aiogram_light
 ```
 
 Create a virtual environment to isolate your dependencies:
@@ -77,6 +77,48 @@ python main.py
 ```
 
 Now, you can go to your Telegram App and interact with your bot.
+
+### Autostart the bot
+
+To make bot autorun when system is booting
+
+Make service, command:
+
+```bash
+sudo nano /etc/systemd/system/smshub.service
+```
+
+Put this, change username with your username
+
+```bash
+[Unit]
+Description=SMSHub BOT service
+
+[Service]
+WorkingDirectory=/home/username/smshub_aiogram_light
+ExecStart=/home/username/smshub_aiogram_light/venv/bin/python3 main.py
+User=username
+Type=simple
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+```
+
+
+Then reload and enable the service
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable smshub.service
+sudo systemctl start smshub
+sudo systemctl status smshub
+```
+
+
+Now you should see the service is running OK
+
 
 ## Usage
 
