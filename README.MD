@@ -66,6 +66,9 @@ MY_CHAT_ID=your_telegram_chat_id
 SERVICES_DICT='{"ServiceName1": "code1", "ServiceName2": "code2", ...}'
 ```
 
+To see the ServiceName and code https://smshub.org/en/info#getServices
+
+
 To get your Telegram Chat ID, you can use [@userinfobot](https://t.me/userinfobot) on Telegram. Simply forward a message to this bot, and it will reply with the user info, including the Chat ID.
 
 ### Running the Bot
@@ -126,6 +129,17 @@ Now you should see the service is running OK
 - Click on '💵 Balance' to get the balance from your smshub.org account.
 - Click on '📞 Buy number' to buy a phone number from a list of available services.
 - When a number is bought, you can click 'Cancel' to cancel the number, 'Get new code' to get a new code for the number, and 'Finish' to mark the number as finished.
+
+## Note
+
+This script already modified for better usage of ID number, if you want change the country number, go to smshub_api/api.py and goto line 37
+
+```bash
+async def get_number(self, service, country=6):
+```
+
+6 for ID, 0 for any
+Other ID you can see in https://smshub.org/en/info#getCountries
 
 ## Contributing
 
