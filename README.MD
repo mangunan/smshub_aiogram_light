@@ -67,7 +67,7 @@ MY_CHAT_ID=your_telegram_chat_id
 SERVICES_DICT='{"ServiceName1": "code1", "ServiceName2": "code2", ...}'
 ```
 
-To see the ServiceName and code https://smshub.org/en/info#getServices
+To see the list of ServiceName and code https://smshub.org/en/info#getServices
 
 
 To get your Telegram Chat ID, you can use [@userinfobot](https://t.me/userinfobot) on Telegram. Simply forward a message to this bot, and it will reply with the user info, including the Chat ID.
@@ -142,6 +142,7 @@ async def get_number(self, service, country=6):
 ```
 
 6 for ID, 0 for any
+
 Other ID you can see in https://smshub.org/en/info#getCountries
 
 ## Contributing
