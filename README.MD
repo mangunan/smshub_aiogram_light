@@ -162,6 +162,10 @@ For the operator, you can edit `smshub_api/api.py` in `line 47` add param `&oper
 url = f'{self.main_url}getNumber&service={service}&country={country}&operator=any
 ```
 
+You can set the max price in the bot too, but i prefer set max price in the smshub website, the bot will follow automatically, so you dont need to edit manually
+
+If you prefer set max price in the bot, just edit `smshub_api/api.py` in `line 47` add param `&maxPrice=`
+
 
 ## Contributing
 
