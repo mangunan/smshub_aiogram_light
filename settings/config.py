@@ -17,7 +17,7 @@ GET_NEW_CODE = 3
 FINISH_NUMBER = 6
 
 # Path to file smshub service
-file_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'file.txt')
+file_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'service.txt')
 
 # Read data from text files
 with open(file_path, 'r') as file:
