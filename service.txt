@@ -1,0 +1,23 @@
+{
+  "Any Other": "ot",
+  "Tomoro Coffee": "ang",
+  "Lazada": "dl",
+  "Grab": "jg",
+  "Gojek": "ni",
+  "ProtonMail": "dp",
+  "Telegram": "tg",
+  "Google Service": "go",
+  "Whatsapp": "wa",
+  "Microsoft": "mm",
+  "Facebook": "fb",
+  "Steam": "mt",
+  "Netflix": "nf",
+  "Discord": "ds",
+  "tiktok/douyin": "lf",
+  "shopee": "ka",
+  "dominos pizza": "dz",
+  "paysafecard": "jq",
+  "aliexpress": "hx",
+  "dana": "fr",
+  "alfagift": "bn"
+}

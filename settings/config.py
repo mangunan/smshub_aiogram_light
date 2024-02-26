@@ -16,18 +16,21 @@ CANCEL_NUMBER = 8
 GET_NEW_CODE = 3
 FINISH_NUMBER = 6
 
-# Load the dictionary of services and their corresponding codes
-# from an environment variable
-# Example of the structure of the services dictionary:
-EXAMPLE_DICT = {
-    'Service name': 'Service code',
-}
-# The dictionary is stored as a JSON string in the environment variable
-SERVICES_JSON = os.getenv('SERVICES_DICT')
+# Path to file smshub service
+file_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'service.txt')
 
-if SERVICES_JSON is not None:
-    SERVICES = json.loads(SERVICES_JSON)
+# Read data from text files
+with open(file_path, 'r') as file:
+    SERVICES_DICT = json.load(file)
+
+# Load the dictionary of services and their corresponding codes
+# from the file
+if SERVICES_DICT:
+    SERVICES = SERVICES_DICT
 else:
+    EXAMPLE_DICT = {
+        'Service name': 'Service code',
+    }
     SERVICES = EXAMPLE_DICT
 
 # Telegram bot token (obtained from https://core.telegram.org/bots/api)
