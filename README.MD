@@ -74,7 +74,7 @@ To get your Telegram Chat ID, you can use [@userinfobot](https://t.me/userinfobo
 
 You can get the list of Service Name and code in https://smshub.org/en/info#getServices
 
-Edit the service.txt
+Edit the `service.txt`
 
 ```bash
 {
@@ -144,17 +144,24 @@ Now you should see the service is running OK
 - Click on '📞 Buy number' to buy a phone number from a list of available services.
 - When a number is bought, you can click 'Cancel' to cancel the number, 'Get new code' to get a new code for the number, and 'Finish' to mark the number as finished.
 
-## Note
+## Configure Operator, Country ID, and Max Price
 
-This script already modified for better usage of ID number, if you want change the country number, go to smshub_api/api.py and goto line 37
+This script already modified for better usage of IDN number, if you want change the country number, go to `smshub_api/api.py` and goto `line 37`
 
 ```bash
 async def get_number(self, service, country=6):
 ```
 
-6 for ID, 0 for any
+6 for IDN, 0 for any
 
-Other ID you can see in https://smshub.org/en/info#getCountries
+Other country code you can see in https://smshub.org/en/info#getCountries
+
+For the operator, you can edit `smshub_api/api.py` in `line 47` add param `&operator=`
+
+```
+url = f'{self.main_url}getNumber&service={service}&country={country}&operator=any
+```
+
 
 ## Contributing
 
