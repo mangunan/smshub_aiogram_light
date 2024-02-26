@@ -20,6 +20,8 @@ logger = logging.getLogger(__name__)
 dotenv_path = find_dotenv()
 load_dotenv(dotenv_path)
 
+# Splitting multiple chat IDs from the environment variable
+chat_ids = os.getenv('MY_CHAT_ID').split(',')
 
 async def check_user_id(message: aiogram.types.Message):
     """
@@ -27,7 +29,7 @@ async def check_user_id(message: aiogram.types.Message):
     :param message:
     :return:
     """
-    if message.from_user.id != int(os.getenv('MY_CHAT_ID')):
+    if str(message.from_user.id) not in chat_ids:
         await message.answer('You are not allowed to use this bot')
         return False
     return True
