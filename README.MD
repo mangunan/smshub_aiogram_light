@@ -63,14 +63,23 @@ Your `.env` file should look like this:
 ```bash
 SMSHUB_API=your_sms_hub_api_key
 BOT_TOKEN=your_telegram_bot_token
-MY_CHAT_ID=your_telegram_chat_id
-SERVICES_DICT='{"ServiceName1": "code1", "ServiceName2": "code2", ...}'
+MY_CHAT_ID=your_telegram_chat_id_1,your_telegram_chat_id_2,your_telegram_chat_id_3
 ```
-
-To see the list of ServiceName and code https://smshub.org/en/info#getServices
 
 
 To get your Telegram Chat ID, you can use [@userinfobot](https://t.me/userinfobot) on Telegram. Simply forward a message to this bot, and it will reply with the user info, including the Chat ID.
+
+.
+### Configuring the service list
+
+You can get the list of Service Name and code in https://smshub.org/en/info#getServices
+
+```bash
+{
+  "Service Name": "code",
+  "Service Name2: "code2',
+}
+
 
 .
 ### Running the Bot
