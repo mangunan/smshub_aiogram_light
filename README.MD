@@ -74,6 +74,8 @@ To get your Telegram Chat ID, you can use [@userinfobot](https://t.me/userinfobo
 
 You can get the list of Service Name and code in https://smshub.org/en/info#getServices
 
+Edit the service.txt
+
 ```bash
 {
   "Service Name": "code",
@@ -87,7 +89,7 @@ You can get the list of Service Name and code in https://smshub.org/en/info#getS
 To start the bot, run the following command:
 
 ```bash
-python main.py
+python3 main.py
 ```
 
 Now, you can go to your Telegram App and interact with your bot.
