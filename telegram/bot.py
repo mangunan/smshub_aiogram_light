@@ -59,7 +59,7 @@ async def process_balance_command(message: aiogram.types.Message):
     """
     if not await check_user_id(message):
         return
-    await message.answer('$', await hub.get_balance())
+    await message.answer(f'${await hub.get_balance()}')
     logger.info('Balance sent')
 
 
