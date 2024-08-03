@@ -88,10 +88,10 @@ async def process_service_choice(callback_query: aiogram.types.CallbackQuery):
     :param callback_query: The received callback query.
     """
     check_balance = float(await hub.get_balance())
-    if check_balance <= 20.00:
+    if check_balance <= 0.20:
         await bot.answer_callback_query(
             callback_query.id,
-            text=f'Not enough money. Balance: {check_balance} RUB',
+            text=f'Not enough money. Balance: {check_balance} USD',
             show_alert=True,
         )
         logger.info('Not enough money')
